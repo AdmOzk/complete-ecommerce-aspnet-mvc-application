@@ -11,6 +11,7 @@
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
+      "launchUrl": "https://localhost:44336/Movies", // Set the launchUrl to the full URL
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5117",
       "environmentVariables": {

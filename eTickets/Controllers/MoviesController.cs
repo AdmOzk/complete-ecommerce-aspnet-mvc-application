@@ -33,5 +33,15 @@ namespace eTickets.Controllers
             return View(movieDetail);
         }
 
+        public ActionResult Create()
+
+        {
+
+            ViewData["Welcome"] = "Welcome to our store";
+            ViewBag.Description = "This is store description";
+
+            return View();
+        }
+
     }
 }

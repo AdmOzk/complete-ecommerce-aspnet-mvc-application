@@ -14,12 +14,5 @@ namespace eTickets.Models
         public string ShoppingCartId { get; set; }
 
 
-
-
-
-
-
-
-
     }
 }

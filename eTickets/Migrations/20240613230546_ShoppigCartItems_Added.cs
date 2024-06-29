@@ -11,7 +11,7 @@ namespace eTickets.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ShoppingCartItem",
+                name: "ShoppingCartItems",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -22,9 +22,9 @@ namespace eTickets.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ShoppingCartItem", x => x.Id);
+                    table.PrimaryKey("PK_ShoppingCartItems", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ShoppingCartItem_Movies_MovieId",
+                        name: "FK_ShoppingCartItems_Movies_MovieId",
                         column: x => x.MovieId,
                         principalTable: "Movies",
                         principalColumn: "Id",
@@ -32,8 +32,8 @@ namespace eTickets.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ShoppingCartItem_MovieId",
-                table: "ShoppingCartItem",
+                name: "IX_ShoppingCartItems_MovieId",
+                table: "ShoppingCartItems",
                 column: "MovieId");
         }
 
@@ -41,7 +41,7 @@ namespace eTickets.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ShoppingCartItem");
+                name: "ShoppingCartItems");
         }
     }
 }

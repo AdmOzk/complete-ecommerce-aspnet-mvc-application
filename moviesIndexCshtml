@@ -1,7 +1,7 @@
 @model IEnumerable<Movie>
 
 @{
-    ViewData["Title"] = "List of Movies";
+    ViewData["Title"] = "List of Moviess";
 }
 
 <div class="row">

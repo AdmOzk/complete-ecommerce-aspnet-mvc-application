@@ -4,10 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using eTickets.Data.Services;
 using eTickets.Models;
 using Microsoft.AspNetCore.Authorization;
+using eTickets.Data.Static;
 
 namespace eTickets.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = UserRoles.Admin)]
     public class ActorsController : Controller
     {
         private readonly IActorsService _service;

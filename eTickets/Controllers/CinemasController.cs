@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace eTickets.Controllers
 {
+    [Authorize]
     public class CinemasController : Controller
     {
         private readonly ICinemasService _service;
@@ -17,7 +18,7 @@ namespace eTickets.Controllers
         }
 
 
-
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
 

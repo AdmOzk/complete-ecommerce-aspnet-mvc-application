@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace eTickets.Controllers
 {
+    [Authorize]
     public class MoviesController : Controller
     {
         private readonly IMoviesService _service;
@@ -18,7 +19,7 @@ namespace eTickets.Controllers
         }
 
 
-
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
 
@@ -27,6 +28,7 @@ namespace eTickets.Controllers
             return View(allMovies);
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Filter(string searchString)
         {
 
